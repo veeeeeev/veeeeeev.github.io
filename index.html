@@ -45,11 +45,20 @@ button{
 }      
 
 </style>
-
 </head>
-<body id="body1">
 
-<p1 align="center" id="p1">聚合搜索</p1>
+<body id="body1" onload = getD1()>
+<script>
+     function  getD1(){
+         var date=new Date();
+         var d1=date.getFullYear()+ "年"+(date.getMonth()+1)+"月"+date.getDate()+"日"+date.getHours()+":"+ date.getMinutes()+":"+date.getSeconds()+"";
+     document.getElementById("datetime").innerHTML =d1; 
+     }
+     setInterval("getD1();",1000);
+</script>
+
+<p1>聚合搜索</p1>
+<p1 id="datetime">现在时间</p1>
 
 <br/><br/>
 
@@ -129,15 +138,6 @@ window.open(txtwb);}
 <br/><br/>
 
 <script>
-function Github(){
-var txt6="https://www.github.com/search?q="+document.getElementById("txtv").value; 
-window.open(txt6);
-}
-</script>   
-<button type="submit" id="Githubbt" onclick="Github()"   >Github
-</button><br/><br/>
-
-<script>
 function bilibili(){
 var txt7="https://search.bilibili.com/all?keyword="+document.getElementById("txtv").value; 
 window.open(txt7);
@@ -145,6 +145,16 @@ window.open(txt7);
 </script>   
 <button type="submit" id="bilibilibt" onclick="bilibili()"   >bilibili
 </button><br/><br/>
+
+<script>
+function github(){
+var txt6="https://www.github.com/search?q="+document.getElementById("txtv").value; 
+window.open(txt6);
+}
+</script>   
+<button type="submit" id="githubbt" onclick="github()"   >github
+</button><br/><br/>
+
 
 <script>
 function douban(){
@@ -174,12 +184,20 @@ RandomColor4 = '#'+Math.floor(Math.random()*4423626).toString(16);
 RandomColor5 = '#'+Math.floor(Math.random()*5553665).toString(16);
 RandomColor6 = '#'+Math.floor(Math.random()*6676665).toString(16);
 RandomColor7= '#'+Math.floor(Math.random()*7621132).toString(16);
+
 document.getElementById('txtv').style.color=RandomColor1;
-document.getElementById('baidubt').style.color=RandomColor2;
+document.getElementById('baidubt').style.color=RandomColor6;
 document.getElementById('colorbt').style.color=RandomColor3;
-document.getElementById('h1').style.color=RandomColor4;
-document.getElementById('bingbt').style.color=RandomColor5;
+document.getElementById('datetime').style.color=RandomColor4;
+document.getElementById('bingbt').style.color=RandomColor1;
 document.getElementById('sogoubt').style.color=RandomColor6;
+document.getElementById('githubbt').style.color=RandomColor6;
+document.getElementById('senmabt').style.color=RandomColor6;
+document.getElementById('sobt').style.color=RandomColor6;
+document.getElementById('zhihubt').style.color=RandomColor6;
+document.getElementById('weibobt').style.color=RandomColor6;
+document.getElementById('bilibilibt').style.color=RandomColor6;
+document.getElementById('doubanbt').style.color=RandomColor6;
 }
 
 </script>  
@@ -190,9 +208,9 @@ document.getElementById('sogoubt').style.color=RandomColor6;
 
 <a href="https://www.baidu.com/error.html" target="_blank">百度</a>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.bing.com/" target="_blank">Bing</a>
+<a href="https://time.is/zh//Beijing" target="_blank">北京时间</a>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.baidu.com/error.html" target="_blank">百度</a>
+<a href="http://www.36dj.com" target="_blank">36DJ舞曲网</a>
 </body>
 
 
