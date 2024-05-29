@@ -73,8 +73,18 @@ window.open(txt1);}
 </script>
 <button type="submit" id="bingbt" value="Bing" onclick="bing()" >Bing
 </button>
-<br/><br/>        
-                           
+<br/><br/>
+
+<script>
+function yandex(){
+var txtyd="https://yandex.com/search/?text="+document.getElementById("txtv").value; 
+window.open(txtyd);}
+</script>                         
+<button type="submit" id="yandexbt" onclick="yandex()"
+>Yandex
+</button>
+<br/><br/>
+           
 <script>
 function senma(){
 var txtsm="https://m.sm.cn/s?q="+document.getElementById("txtv").value; 
